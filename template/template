@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page template</title>
+    <link rel="stylesheets" href="styles.css">
+</head>
+<body>
+
+    <!-- menu button -->
+    <button class="menu-btn" onclick="openNav()">☰ open menu</button>
+
+     <!-- rolling menu overlay -->
+     <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-item" onclick="selectItem(this)">Home</div>
+                <div class="carousel-item" onclick="selectItem(this)">Services</div>
+                <div class="carousel-item" onclick="selectItem(this)">About</div>
+                <div class="carousel-item" onclick="selectItem(this)">Contact</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div class="content">
+        <h1>rspnsv web page template</h1>
+        <p>sample rspnsv page with menu overlay in lop left.</p>
+        <p>resize to see rspnsv in action!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
