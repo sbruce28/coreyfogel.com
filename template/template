@@ -14,7 +14,7 @@
      <!-- rolling menu overlay -->
      <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        
+
         <div class="carousel-container">
             <div class="carousel-track">
                 <div class="carousel-item" onclick="selectItem(this)">Home</div>

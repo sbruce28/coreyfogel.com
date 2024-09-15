@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+/*menu button */
+.menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #555;
+}
+
+/* overlay */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Black with opacity */
+    overflow: hidden;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Carousel container */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Carousel track */
+.carousel-track {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel items */
+.carousel-item {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    padding: 20px 0;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-item:hover {
+    opacity: 1;
+}
+
+/* Full opacity when selected */
+.carousel-item.selected {
+    opacity: 1;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content a:hover {
+    color: #f1f1f1;
+}
+
+/* Media Queries for smaller devices */
+@media screen and (max-width: 600px) {
+    .carousel-item {
+        font-size: 24px;
+        padding: 15px 0;
+    }
+
+    .close {
+        font-size: 40px;
+    }
+
+    .menu-btn {
+        font-size: 24px;
+        padding: 8px;
+    }
+}

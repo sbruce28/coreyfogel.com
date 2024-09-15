@@ -1,0 +1,24 @@
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-item');
+const totalSlides = slides.length;
+
+/* Open the overlay */
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close the overlay */
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+
+/* Move to the next or previous slide */
+function moveSlide(n) {
+    currentSlide += n;
+    if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    }
+    document.querySelector('.carousel-track').style.transform = `translateX(-${currentSlide * 100}%)`;
+}
